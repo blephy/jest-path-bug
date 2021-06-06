@@ -1,4 +1,4 @@
-const square = require("./my-lib");
+const square = require("./store");
 
 describe("Square method", () => {
   it("should be defined", () => {

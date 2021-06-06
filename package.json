@@ -4,7 +4,7 @@
   },
   "scripts": {
     "test": "jest",
-    "test:every": "npm run test:bug:*",
+    "test:every": "npm run test:bug:my-app && npm run test:bug:my-app:ext && npm run test:bug:core && npm run test:bug:core:ext && npm run test:bug:shared && npm run test:bug:shared:ext && npm run test:bug:hyphen && npm run test:bug:hyphen:ext && npm run test:bug:complexe && npm run test:bug:complexe:ext && npm run test:bug:complexe2 && npm run test:bug:complexe2:ext && npm run test:bug:likeme && npm run test:bug:likeme:ext",
     "test:bug:my-app": "echo \"test without special characters\" && jest --findRelatedTests src/my-app",
     "test:bug:my-app:ext": "echo \"test without special characters and with file extension\" && jest --findRelatedTests src/my-app.ts",
     "test:bug:core": "echo \"test with special character and core word\" && jest --findRelatedTests src/@core/my-lib",
