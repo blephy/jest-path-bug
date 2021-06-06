@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "jest": "^27.0.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:every": "npm run test && npm run test:my-app && npm run test:core && npm run test:shared && npm run test:hyphen && npm run test:complexe && npm run test:complexe2 && npm run test:likeme",
+    "test:my-app": "echo \"test without special characters\" && jest --findRelatedTests src/my-app",
+    "test:core": "echo \"test with special character and core word\" && jest --findRelatedTests src/@core/my-lib",
+    "test:shared": "echo \"test with special character and shared word\" && jest --findRelatedTests src/@shared/my-lib",
+    "test:hyphen": "echo \"test with special character and hyphen\" && jest --findRelatedTests src/@name-with-hyphen/my-lib",
+    "test:complexe": "echo \"test with special characters\" && jest --findRelatedTests src/@$_(ok)/my-lib",
+    "test:complexe2": "echo \"test with special characters 2\" && jest --findRelatedTests src/@_(ok)/my-lib",
+    "test:likeme": "echo \"test with long path like in my app\" && jest --findRelatedTests src/app/@core/store/store.ts"
+  }
+}
