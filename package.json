@@ -6,6 +6,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:mutation": "npx stryker run",
     "test:every": "npm run test:bug:my-app:ext && npm run test:bug:core:ext && npm run test:bug:shared:ext && npm run test:bug:hyphen:ext && npm run test:bug:complexe:ext && npm run test:bug:complexe2:ext && npm run test:bug:likeme:ext",
     "test:bug:my-app:ext": "echo \"test without special characters and with file extension\" && jest --findRelatedTests 'src/my-app.ts'",
     "test:bug:core:ext": "echo \"test with special character and core word and with file extension\" && jest --findRelatedTests 'src/@core/my-lib.ts'",
