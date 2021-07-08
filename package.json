@@ -1,23 +1,18 @@
 {
   "devDependencies": {
-    "jest": "^27.0.4"
+    "@stryker-mutator/core": "^5.2.1",
+    "@stryker-mutator/jest-runner": "^5.2.1",
+    "jest": "^27.0.6"
   },
   "scripts": {
     "test": "jest",
-    "test:every": "npm run test:bug:my-app && npm run test:bug:my-app:ext && npm run test:bug:core && npm run test:bug:core:ext && npm run test:bug:shared && npm run test:bug:shared:ext && npm run test:bug:hyphen && npm run test:bug:hyphen:ext && npm run test:bug:complexe && npm run test:bug:complexe:ext && npm run test:bug:complexe2 && npm run test:bug:complexe2:ext && npm run test:bug:likeme && npm run test:bug:likeme:ext",
-    "test:bug:my-app": "echo \"test without special characters\" && jest --findRelatedTests src/my-app",
+    "test:every": "npm run test:bug:my-app:ext && npm run test:bug:core:ext && npm run test:bug:shared:ext && npm run test:bug:hyphen:ext && npm run test:bug:complexe:ext && npm run test:bug:complexe2:ext && npm run test:bug:likeme:ext",
     "test:bug:my-app:ext": "echo \"test without special characters and with file extension\" && jest --findRelatedTests src/my-app.ts",
-    "test:bug:core": "echo \"test with special character and core word\" && jest --findRelatedTests src/@core/my-lib",
     "test:bug:core:ext": "echo \"test with special character and core word and with file extension\" && jest --findRelatedTests src/@core/my-lib.ts",
-    "test:bug:shared": "echo \"test with special character and shared word\" && jest --findRelatedTests src/@shared/my-lib",
     "test:bug:shared:ext": "echo \"test with special character and shared word and with file extension\" && jest --findRelatedTests src/@shared/my-lib.ts",
-    "test:bug:hyphen": "echo \"test with special character and hyphen\" && jest --findRelatedTests src/@name-with-hyphen/my-lib",
     "test:bug:hyphen:ext": "echo \"test with special character and hyphen and with file extension\" && jest --findRelatedTests src/@name-with-hyphen/my-lib.ts",
-    "test:bug:complexe": "echo \"test with special characters\" && jest --findRelatedTests src/@$_(ok)/my-lib",
     "test:bug:complexe:ext": "echo \"test with special characters and with file extension\" && jest --findRelatedTests src/@$_(ok)/my-lib.ts",
-    "test:bug:complexe2": "echo \"test with special characters 2\" && jest --findRelatedTests src/@_(ok)/my-lib",
     "test:bug:complexe2:ext": "echo \"test with special characters 2 and with file extension\" && jest --findRelatedTests src/@_(ok)/my-lib.ts",
-    "test:bug:likeme": "echo \"test with long path like in my app\" && jest --findRelatedTests src/app/@core/store/store",
     "test:bug:likeme:ext": "echo \"test with long path like in my app and with file extension\" && jest --findRelatedTests src/app/@core/store/store.ts"
   }
 }
