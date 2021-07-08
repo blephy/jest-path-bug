@@ -9,5 +9,7 @@ npm run test
 
 npm run test:every
 
+npm run test:mutation
+
 #look path in package.json
 ```
